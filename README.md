@@ -3,7 +3,7 @@
 Tools for analyzing the generated machine code of CPython's interpreter loop. Only tested
 on x86-64 Linux.
 
-`distinterp.py`
+## `distinterp.py`
 
 This overlays source lines and containing bytecode instruction on top of disassembly
 of the interpreter loop. For example, the following shows the dump of the assembly for
@@ -84,3 +84,11 @@ location than what is recorded in the debug info in the binary:
 ```
 python ../interpdump/interpdump.py --dispatch-only --replace-src /root/src,/home/mpage/local/ ./python
 ```
+
+## `parse_gcc_ipa_inline_dump.py`
+
+This parses the dump files from GCC's IPA inlining pass and print all of the calls that we inlined
+into the interpreter loop:
+
+1. Compile CPython with `CFLAGS="-fdump-ipa-inline"`.
+2. Run the script on the resulting dumpfile.
