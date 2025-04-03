@@ -1,6 +1,7 @@
 # Disinterp
 
-Tools for analyzing the generated machine code of CPython's interpreter loop.
+Tools for analyzing the generated machine code of CPython's interpreter loop. Only tested
+on x86-64 Linux.
 
 `distinterp.py`
 
