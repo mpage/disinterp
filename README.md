@@ -74,11 +74,11 @@ the `LOAD_FAST_BORROW` opcode:
           19b605: endbr64
 ```
 
-You can use the `--dispatch-only` flag to restrict output to code that is generated
+Use the `--dispatch-only` flag to restrict output to code that is generated
 for `DISPATCH()` statements.
 
 Use the `--replace-src` flag if you need to disassemble a binary whose source lives at different
-location than what is recorded in the debug info in the binary. For example,
+location than what is recorded in the debug info in the binary:
 
 ```
 python ../interpdump/interpdump.py --dispatch-only --replace-src /root/src,/home/mpage/local/ ./python
